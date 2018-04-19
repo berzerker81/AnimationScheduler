@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		948B29ED20873C2800806F40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B29EC20873C2800806F40 /* AppDelegate.m */; };
+		948B29F020873C2800806F40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B29EF20873C2800806F40 /* ViewController.m */; };
+		948B29F320873C2800806F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948B29F120873C2800806F40 /* Main.storyboard */; };
+		948B29F520873C2800806F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948B29F420873C2800806F40 /* Assets.xcassets */; };
+		948B29F820873C2800806F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948B29F620873C2800806F40 /* LaunchScreen.storyboard */; };
+		948B29FB20873C2800806F40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B29FA20873C2800806F40 /* main.m */; };
+		948B2A0520873C2800806F40 /* AnimSchedulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A0420873C2800806F40 /* AnimSchedulerTests.m */; };
+		948B2A1020873C2800806F40 /* AnimSchedulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A0F20873C2800806F40 /* AnimSchedulerUITests.m */; };
+		948B2A1F20873C7500806F40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A1E20873C7500806F40 /* File.swift */; };
+		948B2A2820873F1600806F40 /* ScheduleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A2720873F1600806F40 /* ScheduleAnimator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		948B2A0120873C2800806F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 948B29E020873C2800806F40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 948B29E720873C2800806F40;
+			remoteInfo = AnimScheduler;
+		};
+		948B2A0C20873C2800806F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 948B29E020873C2800806F40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 948B29E720873C2800806F40;
+			remoteInfo = AnimScheduler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		948B2A2420873CD900806F40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		948B29E820873C2800806F40 /* AnimScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		948B29EB20873C2800806F40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		948B29EC20873C2800806F40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		948B29EE20873C2800806F40 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		948B29EF20873C2800806F40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		948B29F220873C2800806F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		948B29F420873C2800806F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		948B29F720873C2800806F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		948B29F920873C2800806F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948B29FA20873C2800806F40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		948B2A0020873C2800806F40 /* AnimSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		948B2A0420873C2800806F40 /* AnimSchedulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimSchedulerTests.m; sourceTree = "<group>"; };
+		948B2A0620873C2800806F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948B2A0B20873C2800806F40 /* AnimSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		948B2A0F20873C2800806F40 /* AnimSchedulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimSchedulerUITests.m; sourceTree = "<group>"; };
+		948B2A1120873C2800806F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948B2A1D20873C7500806F40 /* AnimScheduler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimScheduler-Bridging-Header.h"; sourceTree = "<group>"; };
+		948B2A1E20873C7500806F40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		948B2A2620873F1600806F40 /* ScheduleAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleAnimator.h; sourceTree = "<group>"; };
+		948B2A2720873F1600806F40 /* ScheduleAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleAnimator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		948B29E520873C2800806F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B29FD20873C2800806F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B2A0820873C2800806F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		948B29DF20873C2800806F40 = {
+			isa = PBXGroup;
+			children = (
+				948B29EA20873C2800806F40 /* AnimScheduler */,
+				948B2A0320873C2800806F40 /* AnimSchedulerTests */,
+				948B2A0E20873C2800806F40 /* AnimSchedulerUITests */,
+				948B29E920873C2800806F40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		948B29E920873C2800806F40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				948B29E820873C2800806F40 /* AnimScheduler.app */,
+				948B2A0020873C2800806F40 /* AnimSchedulerTests.xctest */,
+				948B2A0B20873C2800806F40 /* AnimSchedulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		948B29EA20873C2800806F40 /* AnimScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				948B29EB20873C2800806F40 /* AppDelegate.h */,
+				948B29EC20873C2800806F40 /* AppDelegate.m */,
+				948B29EE20873C2800806F40 /* ViewController.h */,
+				948B29EF20873C2800806F40 /* ViewController.m */,
+				948B29F120873C2800806F40 /* Main.storyboard */,
+				948B29F420873C2800806F40 /* Assets.xcassets */,
+				948B29F620873C2800806F40 /* LaunchScreen.storyboard */,
+				948B29F920873C2800806F40 /* Info.plist */,
+				948B29FA20873C2800806F40 /* main.m */,
+				948B2A1E20873C7500806F40 /* File.swift */,
+				948B2A1D20873C7500806F40 /* AnimScheduler-Bridging-Header.h */,
+				948B2A2620873F1600806F40 /* ScheduleAnimator.h */,
+				948B2A2720873F1600806F40 /* ScheduleAnimator.m */,
+			);
+			path = AnimScheduler;
+			sourceTree = "<group>";
+		};
+		948B2A0320873C2800806F40 /* AnimSchedulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				948B2A0420873C2800806F40 /* AnimSchedulerTests.m */,
+				948B2A0620873C2800806F40 /* Info.plist */,
+			);
+			path = AnimSchedulerTests;
+			sourceTree = "<group>";
+		};
+		948B2A0E20873C2800806F40 /* AnimSchedulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				948B2A0F20873C2800806F40 /* AnimSchedulerUITests.m */,
+				948B2A1120873C2800806F40 /* Info.plist */,
+			);
+			path = AnimSchedulerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		948B29E720873C2800806F40 /* AnimScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948B2A1420873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimScheduler" */;
+			buildPhases = (
+				948B29E420873C2800806F40 /* Sources */,
+				948B29E520873C2800806F40 /* Frameworks */,
+				948B29E620873C2800806F40 /* Resources */,
+				948B2A2420873CD900806F40 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimScheduler;
+			productName = AnimScheduler;
+			productReference = 948B29E820873C2800806F40 /* AnimScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		948B29FF20873C2800806F40 /* AnimSchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948B2A1720873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimSchedulerTests" */;
+			buildPhases = (
+				948B29FC20873C2800806F40 /* Sources */,
+				948B29FD20873C2800806F40 /* Frameworks */,
+				948B29FE20873C2800806F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				948B2A0220873C2800806F40 /* PBXTargetDependency */,
+			);
+			name = AnimSchedulerTests;
+			productName = AnimSchedulerTests;
+			productReference = 948B2A0020873C2800806F40 /* AnimSchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		948B2A0A20873C2800806F40 /* AnimSchedulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948B2A1A20873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimSchedulerUITests" */;
+			buildPhases = (
+				948B2A0720873C2800806F40 /* Sources */,
+				948B2A0820873C2800806F40 /* Frameworks */,
+				948B2A0920873C2800806F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				948B2A0D20873C2800806F40 /* PBXTargetDependency */,
+			);
+			name = AnimSchedulerUITests;
+			productName = AnimSchedulerUITests;
+			productReference = 948B2A0B20873C2800806F40 /* AnimSchedulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		948B29E020873C2800806F40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "장웅";
+				TargetAttributes = {
+					948B29E720873C2800806F40 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					948B29FF20873C2800806F40 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 948B29E720873C2800806F40;
+					};
+					948B2A0A20873C2800806F40 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 948B29E720873C2800806F40;
+					};
+				};
+			};
+			buildConfigurationList = 948B29E320873C2800806F40 /* Build configuration list for PBXProject "AnimScheduler" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 948B29DF20873C2800806F40;
+			productRefGroup = 948B29E920873C2800806F40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				948B29E720873C2800806F40 /* AnimScheduler */,
+				948B29FF20873C2800806F40 /* AnimSchedulerTests */,
+				948B2A0A20873C2800806F40 /* AnimSchedulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		948B29E620873C2800806F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948B29F820873C2800806F40 /* LaunchScreen.storyboard in Resources */,
+				948B29F520873C2800806F40 /* Assets.xcassets in Resources */,
+				948B29F320873C2800806F40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B29FE20873C2800806F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B2A0920873C2800806F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		948B29E420873C2800806F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948B29F020873C2800806F40 /* ViewController.m in Sources */,
+				948B2A1F20873C7500806F40 /* File.swift in Sources */,
+				948B2A2820873F1600806F40 /* ScheduleAnimator.m in Sources */,
+				948B29FB20873C2800806F40 /* main.m in Sources */,
+				948B29ED20873C2800806F40 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B29FC20873C2800806F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948B2A0520873C2800806F40 /* AnimSchedulerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948B2A0720873C2800806F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948B2A1020873C2800806F40 /* AnimSchedulerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		948B2A0220873C2800806F40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 948B29E720873C2800806F40 /* AnimScheduler */;
+			targetProxy = 948B2A0120873C2800806F40 /* PBXContainerItemProxy */;
+		};
+		948B2A0D20873C2800806F40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 948B29E720873C2800806F40 /* AnimScheduler */;
+			targetProxy = 948B2A0C20873C2800806F40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		948B29F120873C2800806F40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948B29F220873C2800806F40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		948B29F620873C2800806F40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948B29F720873C2800806F40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		948B2A1220873C2800806F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		948B2A1320873C2800806F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		948B2A1520873C2800806F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimScheduler",
+				);
+				INFOPLIST_FILE = AnimScheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimScheduler/AnimScheduler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		948B2A1620873C2800806F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimScheduler",
+				);
+				INFOPLIST_FILE = AnimScheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimScheduler/AnimScheduler-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		948B2A1820873C2800806F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				INFOPLIST_FILE = AnimSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimScheduler.app/AnimScheduler";
+			};
+			name = Debug;
+		};
+		948B2A1920873C2800806F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				INFOPLIST_FILE = AnimSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimScheduler.app/AnimScheduler";
+			};
+			name = Release;
+		};
+		948B2A1B20873C2800806F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				INFOPLIST_FILE = AnimSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimScheduler;
+			};
+			name = Debug;
+		};
+		948B2A1C20873C2800806F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBLJEZR6VM;
+				INFOPLIST_FILE = AnimSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noleplay81.AnimSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimScheduler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		948B29E320873C2800806F40 /* Build configuration list for PBXProject "AnimScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948B2A1220873C2800806F40 /* Debug */,
+				948B2A1320873C2800806F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948B2A1420873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948B2A1520873C2800806F40 /* Debug */,
+				948B2A1620873C2800806F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948B2A1720873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimSchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948B2A1820873C2800806F40 /* Debug */,
+				948B2A1920873C2800806F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948B2A1A20873C2800806F40 /* Build configuration list for PBXNativeTarget "AnimSchedulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948B2A1B20873C2800806F40 /* Debug */,
+				948B2A1C20873C2800806F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 948B29E020873C2800806F40 /* Project object */;
+}
