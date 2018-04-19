@@ -12,6 +12,7 @@
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *movieView;
 
 @end
 
@@ -92,6 +93,29 @@
 - (IBAction)anistop:(id)sender {
     [anim stop];
     anim = nil;
+}
+- (IBAction)startPetAnimate:(UIButton*)sender
+{
+    ScheduleAnimator * scheduler = [[ScheduleAnimator alloc] init];
+    scheduler.scheduleID = 100;
+    
+    NSString    * path = [[NSBundle mainBundle] pathForResource:@"bgle" ofType:@"png"];
+    UIImage     * image = [UIImage imageWithContentsOfFile:path];
+    UIImageView * imgView = [[UIImageView alloc] initWithImage:image];
+    
+    [self.movieView addSubview:imgView];
+    imgView.center = CGPointMake(self.movieView.bounds.size.width, 0);
+    
+    Animator * ani1 = [imgView defaultCoordi:CGSizeMake(1000, 1000) moveTo:CGPointMake(0, 1000) duration:2.0 delay:0];
+    Animator * ani2 = [imgView defaultCoordi:CGSizeMake(1000, 1000) moveTo:CGPointMake(500, 500) duration:2.0 delay:0];
+    Animator * ani3 = [imgView defaultCoordi:CGSizeMake(1000, 1000) moveTo:CGPointMake(1000, 500) duration:2.0 delay:0];
+    Animator * ani4 = [imgView defaultCoordi:CGSizeMake(1000, 1000) moveTo:CGPointMake(1000, 1000) duration:2.0 delay:0];
+    [scheduler addAnimator:ani1];
+    [scheduler addAnimator:ani2];
+    [scheduler addAnimator:ani3];
+    [scheduler addAnimator:ani4];
+    scheduler.loop = YES;
+    [scheduler commit];
 }
 
 - (IBAction)aniStart:(id)sender {

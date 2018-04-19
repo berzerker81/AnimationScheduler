@@ -34,11 +34,13 @@ typedef void(^AnimationComplete)(void);
 @protocol ScheduleAnimatorDelegate
 @optional
 -(void)ScheduleAnimationComplete;
+-(void)ScheduleAnimationCompleteID:(NSUInteger)scheduleID;
 @end
 @interface ScheduleAnimator : NSObject
 @property(weak)      id<ScheduleAnimatorDelegate> delegate;
 @property(nonatomic) bool loop;
 @property(nonatomic) NSMutableArray * store;
+@property(nonatomic) NSUInteger scheduleID;
 
 -(void)addAnimator:(Animator*)anim;
 -(void)commit;

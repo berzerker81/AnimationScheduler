@@ -116,6 +116,11 @@ void * animatorCtx;
     {
         [(id)self.delegate ScheduleAnimationComplete];
     }
+    
+    if(self.delegate && [(id)self.delegate respondsToSelector:@selector(ScheduleAnimationCompleteID:)])
+    {
+        [(id)self.delegate ScheduleAnimationCompleteID:self.scheduleID];
+    }
 }
 
 

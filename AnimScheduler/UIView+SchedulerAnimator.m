@@ -61,6 +61,18 @@
     return animator;
 }
 
+-(__autoreleasing Animator*)defaultCoordi:(CGSize)defaultCoordi //기준 좌표(받은 좌표)
+                                   moveTo:(CGPoint)moveTo       //기준 좌표 기준 이동할 지점
+                                 duration:(CGFloat)duration
+                                    delay:(CGFloat)delay
+{
+    CGSize superViewSize = self.superview.frame.size;
+    CGPoint coord = CGPointMake(moveTo.x * superViewSize.width / defaultCoordi.width,
+                                moveTo.y * superViewSize.height / defaultCoordi.height);
+    
+    return [self moveTo:coord duration:duration delay:delay];
+}
+
 -(__autoreleasing Animator*)moveBy:(CGPoint)moveBy duration:(CGFloat)duration delay:(CGFloat)delay
 {
     Animator * animator = [[Animator alloc] initWithAnimFunc:^{

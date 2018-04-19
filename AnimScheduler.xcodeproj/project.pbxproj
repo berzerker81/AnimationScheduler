@@ -18,6 +18,7 @@
 		948B2A1F20873C7500806F40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A1E20873C7500806F40 /* File.swift */; };
 		948B2A2820873F1600806F40 /* ScheduleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A2720873F1600806F40 /* ScheduleAnimator.m */; };
 		94C828E720883AF900577C6C /* UIView+SchedulerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C828E620883AF900577C6C /* UIView+SchedulerAnimator.m */; };
+		94C828F02088877100577C6C /* bgle.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C828EF2088877000577C6C /* bgle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		948B2A2720873F1600806F40 /* ScheduleAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleAnimator.m; sourceTree = "<group>"; };
 		94C828E520883AF900577C6C /* UIView+SchedulerAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SchedulerAnimator.h"; sourceTree = "<group>"; };
 		94C828E620883AF900577C6C /* UIView+SchedulerAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SchedulerAnimator.m"; sourceTree = "<group>"; };
+		94C828EF2088877000577C6C /* bgle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		948B29EA20873C2800806F40 /* AnimScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				94C828EF2088877000577C6C /* bgle.png */,
 				948B29EB20873C2800806F40 /* AppDelegate.h */,
 				948B29EC20873C2800806F40 /* AppDelegate.m */,
 				948B29EE20873C2800806F40 /* ViewController.h */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				948B29F820873C2800806F40 /* LaunchScreen.storyboard in Resources */,
+				94C828F02088877100577C6C /* bgle.png in Resources */,
 				948B29F520873C2800806F40 /* Assets.xcassets in Resources */,
 				948B29F320873C2800806F40 /* Main.storyboard in Resources */,
 			);
