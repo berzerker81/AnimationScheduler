@@ -54,10 +54,11 @@ void * animatorCtx;
 
 -(void)animloop:(NSUInteger)animIndex
 {
+
     Animator * anim = animArray[currentIndex];
     currentAnimator = anim;
-    [UIView beginAnimations:@"anim" context:animatorCtx];
-    [UIView setAnimationBeginsFromCurrentState:NO];
+    [UIView beginAnimations:@"anim" context:nil];
+//    [UIView setAnimationBeginsFromCurrentState:NO];
     [UIView setAnimationDuration:anim.duration];
     [UIView setAnimationDelay:anim.delay];
     [UIView setAnimationDelegate:self];
@@ -84,6 +85,8 @@ void * animatorCtx;
     
     currentIndex++;
     
+//    NSLog(@"Ani Idx %d",currentIndex);
+    
     if(currentIndex < animArray.count)
     {
         [self commit];
@@ -104,7 +107,7 @@ void * animatorCtx;
 {
     [currentAnimator.targetView.layer removeAllAnimations];
     stop = YES;
-    [UIView setAnimationsEnabled:NO];
+//    [UIView setAnimationsEnabled:NO];
 }
 
 -(void)completeAnimation
