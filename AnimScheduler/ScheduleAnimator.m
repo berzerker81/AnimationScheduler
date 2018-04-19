@@ -32,6 +32,13 @@ void * animatorCtx;
     [animArray removeAllObjects];
     animArray = nil;
     currentAnimator = nil;
+    
+    for (UILabel * label in self.store)
+    {
+        [label removeFromSuperview];
+    }
+    
+    [self.store removeAllObjects];
 }
 
 -(void)addAnimator:(Animator *)anim
@@ -63,17 +70,16 @@ void * animatorCtx;
 
 -(void)animationEnd:(NSString*)aniID
 {
+    if(stop){
+        
+        [self completeAnimation];
+        
+        return;
+    }
     
     if(currentAnimator.complete)
     {
         currentAnimator.complete();
-    }
-    
-    if(stop){
-      
-        [self completeAnimation];
-        
-        return;
     }
     
     currentIndex++;
@@ -151,6 +157,7 @@ void * animatorCtx;
 {
     _animFunc = nil;
     _complete = nil;
+    
 }
 
 

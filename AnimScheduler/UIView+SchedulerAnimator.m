@@ -9,6 +9,7 @@
 #import "UIView+SchedulerAnimator.h"
 
 @implementation UIView (SchedulerAnimator)
+
 -(__autoreleasing Animator*)moveTo:(CGPoint)moveTo duration:(CGFloat)duration delay:(CGFloat)delay
 {
     Animator * animator = [[Animator alloc] initWithAnimFunc:^{
@@ -40,7 +41,7 @@
         self.layer.opacity = fadeIn ? 1.0 : 0.0;
     } duration:duration delay:delay targetView:self complete:^{
                 self.center = originPos;
-                self.layer.opacity = fadeIn ? 0.0 : 1.0;
+                self.layer.opacity = fadeIn ? 0.0 : 0.0;
     }];
     return animator;
 }
@@ -74,7 +75,6 @@
                         endOffset:(CGPoint)end
                             speed:(CGFloat)speed
 {
-    
     NSMutableArray * mLabels = [NSMutableArray arrayWithCapacity:texts.count];
     
     ScheduleAnimator * anim = [[ScheduleAnimator alloc] init];
@@ -94,16 +94,20 @@
         
         [label setCenter:startPos];
         [mLabels addObject:label];
+        
         [self addSubview:label];
         
-        
+
         
         Animator * fadeIn =  [label moveTo:fadeInPos duration:speed delay:0 fade:YES];
         Animator * fadeOut = [label moveToAndBack:endPos duration:speed delay:0.5 fade:NO];
-        
+        label.layer.opacity = 0;
         [anim addAnimator:fadeIn];
         [anim addAnimator:fadeOut];
     }
+    
+    anim.store = [NSMutableArray arrayWithArray:mLabels];
+    mLabels = nil;
     
     return anim;
 }

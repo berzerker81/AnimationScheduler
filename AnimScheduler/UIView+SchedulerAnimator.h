@@ -10,6 +10,7 @@
 #import "ScheduleAnimator.h"
 //Cocos2d Animation Style
 @interface UIView (SchedulerAnimator)
+
 -(__autoreleasing Animator*)moveTo:(CGPoint)moveTo duration:(CGFloat)duration delay:(CGFloat)delay;
 -(__autoreleasing Animator*)moveBy:(CGPoint)moveBy duration:(CGFloat)duration delay:(CGFloat)delay;
 

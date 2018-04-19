@@ -17,22 +17,13 @@
 
 @implementation ViewController
 {
-    ScheduleAnimator * ani;
+    ScheduleAnimator * anim;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ScheduleAnimator * anim = [self.view scheduleTexts:@[@"123",@"1234",@"12345",@"123456"]
-                        font:[UIFont fontWithName:@"Arial" size:10]
-                 startOffset:CGPointMake(1.0, 0.5)
-                   endOffset:CGPointMake(0.0, 0.5)
-                       speed:1.0
-     ];
-    anim.loop = YES;
-    anim.delegate = self;
-    
-    [anim commit];
+
     
     
     
@@ -99,9 +90,22 @@
     
 }
 - (IBAction)anistop:(id)sender {
-    [ani stop];
+    [anim stop];
+    anim = nil;
 }
 
+- (IBAction)aniStart:(id)sender {
+    anim = [self.view scheduleTexts:@[@"123",@"1234",@"12345",@"123456"]
+                               font:[UIFont fontWithName:@"Arial" size:10]
+                        startOffset:CGPointMake(1.0, 0.5)
+                          endOffset:CGPointMake(0.0, 0.5)
+                              speed:1.0
+            ];
+    anim.loop = YES;
+    anim.delegate = self;
+    
+    [anim commit];
+}
 
 
 -(void)aniStop:(id)sender

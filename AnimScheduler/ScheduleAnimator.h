@@ -38,6 +38,7 @@ typedef void(^AnimationComplete)(void);
 @interface ScheduleAnimator : NSObject
 @property(weak)      id<ScheduleAnimatorDelegate> delegate;
 @property(nonatomic) bool loop;
+@property(nonatomic) NSMutableArray * store;
 
 -(void)addAnimator:(Animator*)anim;
 -(void)commit;
