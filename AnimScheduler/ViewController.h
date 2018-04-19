@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "ScheduleAnimator.h"
+@interface ViewController : UIViewController<ScheduleAnimatorDelegate>
 
 
 @end

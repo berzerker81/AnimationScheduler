@@ -13,6 +13,7 @@
     NSMutableArray  * animArray;
     bool             stop;
     Animator * currentAnimator;
+    NSUInteger       currentIndex;
 }
 void * animatorCtx;
 
@@ -21,6 +22,7 @@ void * animatorCtx;
     self = [super init];
     
     animArray = [NSMutableArray array];
+    currentIndex = 0;
     
     return self;
 }
@@ -40,13 +42,13 @@ void * animatorCtx;
 -(void)commit
 {
     stop = NO;
-    [self animloop:[animArray firstObject]];
+    [self animloop:currentIndex];
 }
 
--(void)animloop:(Animator*)anim
+-(void)animloop:(NSUInteger)animIndex
 {
+    Animator * anim = animArray[currentIndex];
     currentAnimator = anim;
-    [animArray removeObject:animArray.firstObject];
     [UIView beginAnimations:@"anim" context:animatorCtx];
     [UIView setAnimationBeginsFromCurrentState:NO];
     [UIView setAnimationDuration:anim.duration];
@@ -61,9 +63,33 @@ void * animatorCtx;
 
 -(void)animationEnd:(NSString*)aniID
 {
-    if(stop) return;
-    if(animArray.count)
+    
+    if(currentAnimator.complete)
     {
+        currentAnimator.complete();
+    }
+    
+    if(stop){
+      
+        [self completeAnimation];
+        
+        return;
+    }
+    
+    currentIndex++;
+    
+    if(currentIndex < animArray.count)
+    {
+        [self commit];
+    }else
+    {
+        if(self.loop == NO)
+        {
+            [self completeAnimation];
+            return;
+        }
+        
+        currentIndex = 0;
         [self commit];
     }
 }
@@ -75,25 +101,56 @@ void * animatorCtx;
     [UIView setAnimationsEnabled:NO];
 }
 
+-(void)completeAnimation
+{
+    if(self.delegate && [(id)self.delegate respondsToSelector:@selector(ScheduleAnimationComplete)])
+    {
+        [(id)self.delegate ScheduleAnimationComplete];
+    }
+}
+
 
 @end
 
 
 @implementation Animator
--(Animator*)initWithAnimFunc:(AnimationFunc)func duration:(CGFloat)duration delay:(CGFloat)dealy targetView:(UIView*)targetView;
+-(Animator*)initWithAnimFunc:(AnimationFunc)func
+                    duration:(CGFloat)duration
+                       delay:(CGFloat)dealy
+                  targetView:(UIView*)targetView
 {
     self = [super init];
+    
     _targetView = targetView;
-    _animFunc = func;
-    _duration = duration;
-    _delay    = dealy;
+    _animFunc   = func;
+    _duration   = duration;
+    _delay      = dealy;
     
     return self;
 }
 
+-(Animator*)initWithAnimFunc:(AnimationFunc)func
+                    duration:(CGFloat)duration
+                       delay:(CGFloat)dealy
+                  targetView:(UIView*)targetView
+                    complete:(AnimationComplete)complete
+{
+    self = [super init];
+    
+    _targetView = targetView;
+    _animFunc   = func;
+    _duration   = duration;
+    _delay      = dealy;
+    _complete   = complete;
+    
+    return self;
+}
+
+
 -(void)dealloc
 {
     _animFunc = nil;
+    _complete = nil;
 }
 
 

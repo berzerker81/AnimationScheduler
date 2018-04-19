@@ -28,19 +28,53 @@
     [self.view addSubview:label];
     
     
+    
+    
     Animator * a1 = [[Animator alloc] initWithAnimFunc:^{
-        label.center = CGPointMake(label.center.x - 100, label.center.y);
-    } duration:2.0 delay:0 targetView:label];
+        label.center = CGPointMake(0, 100);
+    } duration:2.0 delay:0 targetView:label complete:^{
+        label.center = self.view.center;
+    }];
     
     Animator * a2 = [[Animator alloc] initWithAnimFunc:^{
         label.center = CGPointMake(label.center.x, label.center.y + 100);
     } duration:2.0 delay:0 targetView:label];
-    
+
     ani = [[ScheduleAnimator alloc] init];
-    
+    ani.delegate = self;
+//    ani.loop = YES;
     [ani addAnimator:a1];
     [ani addAnimator:a2];
     [ani commit];
+
+    
+    
+    
+    
+//    Animator * a1 = [[Animator alloc] initWithAnimFunc:^{
+//        label.center = CGPointMake(label.center.x - 100, label.center.y);
+//    } duration:2.0 delay:0 targetView:label];
+//
+//    Animator * a2 = [[Animator alloc] initWithAnimFunc:^{
+//        label.center = CGPointMake(label.center.x, label.center.y + 100);
+//    } duration:2.0 delay:0 targetView:label];
+//
+//    Animator * a3 = [[Animator alloc] initWithAnimFunc:^{
+//        label.center = CGPointMake(label.center.x+100, label.center.y);
+//    } duration:2.0 delay:0 targetView:label];
+//
+//    Animator * a4 = [[Animator alloc] initWithAnimFunc:^{
+//        label.center = CGPointMake(label.center.x, label.center.y - 100);
+//    } duration:2.0 delay:0 targetView:label];
+//
+//
+//    ani = [[ScheduleAnimator alloc] init];
+//    ani.loop = YES;
+//    [ani addAnimator:a1];
+//    [ani addAnimator:a2];
+//    [ani addAnimator:a3];
+//    [ani addAnimator:a4];
+//    [ani commit];
     
 }
 - (IBAction)anistop:(id)sender {
@@ -54,7 +88,10 @@
     NSLog(@"ani end");
 }
 
-
+-(void)ScheduleAnimationComplete
+{
+    NSLog(@"Ani Chain End");
+}
 
 
 - (void)didReceiveMemoryWarning {
