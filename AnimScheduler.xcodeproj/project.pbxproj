@@ -17,6 +17,7 @@
 		948B2A1020873C2800806F40 /* AnimSchedulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A0F20873C2800806F40 /* AnimSchedulerUITests.m */; };
 		948B2A1F20873C7500806F40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A1E20873C7500806F40 /* File.swift */; };
 		948B2A2820873F1600806F40 /* ScheduleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 948B2A2720873F1600806F40 /* ScheduleAnimator.m */; };
+		94C828E720883AF900577C6C /* UIView+SchedulerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C828E620883AF900577C6C /* UIView+SchedulerAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		948B2A1E20873C7500806F40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		948B2A2620873F1600806F40 /* ScheduleAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleAnimator.h; sourceTree = "<group>"; };
 		948B2A2720873F1600806F40 /* ScheduleAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleAnimator.m; sourceTree = "<group>"; };
+		94C828E520883AF900577C6C /* UIView+SchedulerAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SchedulerAnimator.h"; sourceTree = "<group>"; };
+		94C828E620883AF900577C6C /* UIView+SchedulerAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SchedulerAnimator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				948B2A1D20873C7500806F40 /* AnimScheduler-Bridging-Header.h */,
 				948B2A2620873F1600806F40 /* ScheduleAnimator.h */,
 				948B2A2720873F1600806F40 /* ScheduleAnimator.m */,
+				94C828E520883AF900577C6C /* UIView+SchedulerAnimator.h */,
+				94C828E620883AF900577C6C /* UIView+SchedulerAnimator.m */,
 			);
 			path = AnimScheduler;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				948B2A2820873F1600806F40 /* ScheduleAnimator.m in Sources */,
 				948B29FB20873C2800806F40 /* main.m in Sources */,
 				948B29ED20873C2800806F40 /* AppDelegate.m in Sources */,
+				94C828E720883AF900577C6C /* UIView+SchedulerAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
